@@ -1,4 +1,4 @@
-import { module, skip } from 'qunit';
+import { module, test } from 'qunit';
 import { startMirage } from 'wherehows-web/initializers/ember-cli-mirage';
 import datasetsCreateSearchEntries from 'wherehows-web/utils/datasets/create-search-entries';
 import { testSchemaA } from 'wherehows-web/mirage/fixtures/schema';
@@ -12,7 +12,7 @@ module('Unit | Utility | datasets/create search entries', {
   }
 });
 
-skip('it works base case', function(assert) {
+test('it works base case', function(assert) {
   const { server } = this;
   const dataset = server.create('dataset', 'forUnitTests');
 
@@ -24,7 +24,7 @@ skip('it works base case', function(assert) {
   assert.equal(dataset.schema, testSchemaA.slice(0, 499), 'Partial schema from beginning if no keyword found');
 });
 
-skip('it works for keyword cases', function(assert) {
+test('it works for keyword cases', function(assert) {
   const { server } = this;
   const dataset = server.create('dataset', 'forUnitTests');
 
