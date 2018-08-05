@@ -3633,12 +3633,6 @@ ember-radio-button@^1.2.1:
     ember-cli-babel "^6.9.2"
     ember-cli-htmlbars "^1.1.1"
 
-ember-redux@^2.10.1:
-  version "2.10.1"
-  resolved "https://registry.yarnpkg.com/ember-redux/-/ember-redux-2.10.1.tgz#b118be29d50ed85fa388f6a05471270a926f6b2c"
-  dependencies:
-    ember-cli-babel "^6.1.0"
-
 ember-resolver@^4.0.0:
   version "4.5.6"
   resolved "https://registry.yarnpkg.com/ember-resolver/-/ember-resolver-4.5.6.tgz#61cecc683fbe3464d759e6d0c2bab97b3914ee4b"
@@ -7590,10 +7584,6 @@ redeyed@~1.0.0:
   resolved "https://registry.yarnpkg.com/redeyed/-/redeyed-1.0.1.tgz#e96c193b40c0816b00aec842698e61185e55498a"
   dependencies:
     esprima "~3.0.0"
-
-redux-thunk@^2.2.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/redux-thunk/-/redux-thunk-2.3.0.tgz#51c2c19a185ed5187aaa9a2d08b666d0d6467622"
 
 regenerate@^1.2.1:
   version "1.4.0"

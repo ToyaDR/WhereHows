@@ -93,7 +93,6 @@
     "loader.js": "^4.2.3",
     "node-sass": "^4.7.2",
     "prettier": "^1.14.0",
-    "redux-thunk": "^2.2.0",
     "typescript": "^2.9.1"
   },
   "dependencies": {
@@ -106,7 +105,6 @@
     "ember-moment": "^7.5.0",
     "ember-power-select": "^2.0.4",
     "ember-radio-button": "^1.2.1",
-    "ember-redux": "^2.10.1",
     "ember-simple-auth": "^1.4.0",
     "ember-tether": "0.4.1",
     "ember-tooltips": "^2.9.2",
@@ -116,7 +114,7 @@
     "typescript-eslint-parser": "^17.0.1"
   },
   "engines": {
-    "node": "^4.5 || 6.* || >= 7.*"
+    "node": ">= 8.*"
   },
   "lint-staged": {
     "linters": {
