@@ -12,7 +12,7 @@ export default class Compliance extends descendantDatasetRouteClassFactory({ sel
   queryParams = refreshModelForQueryParams(['fieldFilter']);
 
   async model(): Promise<DatasetController['model'] | object> {
-    return { ...this.controllerFor('datasets.dataset').model };
+    return { ...this.modelFor('datasets.dataset') };
   }
 
   setupController(controller: DatasetComplianceController, model: object): void {
