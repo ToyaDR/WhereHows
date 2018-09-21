@@ -1,5 +1,4 @@
 import Component from '@ember/component';
-import ComputedProperty from '@ember/object/computed';
 import { IAvatar } from 'wherehows-web/typings/app/avatars';
 import { alias } from '@ember-decorators/object/computed';
 import { set, get } from '@ember/object';
@@ -22,7 +21,7 @@ export default class AvatarImage extends Component {
    */
   @attribute
   @alias('avatar.imageUrl')
-  src: ComputedProperty<IAvatar['imageUrl']>;
+  src: IAvatar['imageUrl'];
 
   /**
    * Aliases the name property on the related avatar
@@ -30,7 +29,7 @@ export default class AvatarImage extends Component {
    */
   @attribute('alt')
   @alias('avatar.name')
-  name: ComputedProperty<IAvatar['name']>;
+  name: IAvatar['name'];
 
   /**
    * Handler for image error event
@@ -48,6 +47,14 @@ export default class AvatarImage extends Component {
    * @memberof AvatarImage
    */
   onImageFallback = task(function*(this: AvatarImage): IterableIterator<void> {
-    set(this, 'src', this.avatar.imageUrlFallback);
+    const {
+      src,
+      avatar: { imageUrlFallback }
+    } = this;
+
+    // Ensure the current src is not the same as the uri to be applied, e.g. in a case where the fallback fails
+    if (src !== imageUrlFallback) {
+      set(this, 'src', imageUrlFallback);
+    }
   });
 }
